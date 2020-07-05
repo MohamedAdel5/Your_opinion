@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Your Opinion</title>
+  </head>
+  <body>
+    <div class="main">
+      <p class="opinion_prompt">Enter your opinion here:</p>
+      <div class="opinion">
+        <textarea
+          style="direction: rtl;"
+          placeholder="example: يا جماعة بجد بتهزروووو come on الخمرة أصلا حلال أوففف بقى عالرجعية اللي هنا"
+          name="opinion"
+          id="opinion"
+          cols="30"
+          rows="10"
+        >
+        </textarea>
+      </div>
+      <div class="spacer"></div>
+      <button class="submit_opinion">Share Your Opinion</button>
+      <img class="trash_can_img" style="display: none;" src="trash2.png" alt="A trash can" />
+      <img
+        class="ironic_man_img"
+        style="display: none;"
+        src="menemene.jpg"
+        alt="A man acting ironically about others opinion"
+      />
+    </div>
+    <script>
+      const submit_opinion_button = document.getElementsByClassName("submit_opinion")[0];
+      const opinion_prompt = document.getElementsByClassName("opinion_prompt")[0];
+      const trash_can_img = document.getElementsByClassName("trash_can_img")[0];
+      const ironic_man_img = document.getElementsByClassName("ironic_man_img")[0];
+      const opinion = document.getElementsByClassName("opinion")[0];
+      submit_opinion_button.addEventListener("click", () => {
+        submit_opinion_button.style.visibility = "hidden";
+        ironic_man_img.style.display = "inline-block";
+        opinion_prompt.innerHTML = "Thanks!";
+        setTimeout(() => {
+          ironic_man_img.style.display = "none";
+          opinion.style.transform = "rotate(45deg)";
+          opinion.style.transition = "transform  linear 1s";
+          trash_can_img.style.display = "inline-block";
+          setTimeout(() => {
+            opinion.style.transform = "rotate(45deg) translate(150px,150px) scale(0,0)";
+          }, 1000);
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
