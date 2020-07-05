@@ -1,0 +1,22 @@
+{
+  "name": "your_opinion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamedAdel5/Your_opinion.git"
+  },
+  "author": "Mohamed Adel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohamedAdel5/Your_opinion/issues"
+  },
+  "homepage": "https://github.com/MohamedAdel5/Your_opinion#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
