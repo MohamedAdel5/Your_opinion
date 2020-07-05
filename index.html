@@ -21,7 +21,14 @@
       </div>
       <div class="spacer"></div>
       <button class="submit_opinion">Share Your Opinion</button>
-      <img class="trash_can_img" style="display: none;" src="trash2.png" alt="A trash can" />
+      <img
+        class="trash_can_img"
+        style="display: none;"
+        src="trash2.png"
+        alt="A trash can"
+        width="300px"
+        height="300px"
+      />
       <img
         class="ironic_man_img"
         style="display: none;"
@@ -36,8 +43,9 @@
       const ironic_man_img = document.getElementsByClassName("ironic_man_img")[0];
       const opinion = document.getElementsByClassName("opinion")[0];
       submit_opinion_button.addEventListener("click", () => {
-        submit_opinion_button.style.visibility = "hidden";
+        submit_opinion_button.style.display = "none";
         ironic_man_img.style.display = "inline-block";
+        ironic_man_img.scrollIntoView();
         opinion_prompt.innerHTML = "Thanks!";
         setTimeout(() => {
           ironic_man_img.style.display = "none";
@@ -45,7 +53,7 @@
           opinion.style.transition = "transform  linear 1s";
           trash_can_img.style.display = "inline-block";
           setTimeout(() => {
-            opinion.style.transform = "rotate(45deg) translate(150px,150px) scale(0,0)";
+            opinion.style.transform = "rotate(45deg) translate(110px,110px) scale(0,0)";
           }, 1000);
         }, 2000);
       });
